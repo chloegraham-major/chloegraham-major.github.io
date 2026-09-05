@@ -20,10 +20,14 @@ body {
   justify-content: space-between;
   align-items: center;      /* vertically centers EVERYTHING */
   padding: 1.2rem 2rem;     /* slightly taller navbar */
-  background: rgba(255,255,255,0.9);
+  /* Use a solid white background so the navbar remains white even if the hero beneath is dark
+     (the previous translucent value could pick up dark colours from behind and look "black"). */
+  background: #ffffff;
+  /* subtle separation from the page */
+  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
   backdrop-filter: blur(6px);
   border-bottom: none;
-  z-index: 20;
+  z-index: 9999; /* keep the navbar above everything */
 }
 
 /* FIX: align nav items vertically */
@@ -57,10 +61,22 @@ body {
 .hero {
   position: relative;
   height: 70vh;
-  background-image: url('assets/portfolio-bg.png');
+  /* add a fallback background-color and use an absolute path to the asset to avoid relative-path issues */
+  background-color: #190082;
+  background-image: url('/assets/portfolio-bg.png');
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
   margin-top: 0; /* remove gap under navbar */
+}
+
+/* Avoid accidentally covering the hero image if an overlay exists */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  /* keep transparent by default; if you want a tint, reduce the alpha */
+  background: transparent;
+  pointer-events: none;
 }
 
 .hero-content {
