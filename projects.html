@@ -1,21 +1,62 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
     <title>Projects</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <nav>
-        index.htmlHome</a>
-        projects.htmlProjects</a>
-        about.htmlAbout</a>
+
+    <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="about.html">About</a>
     </nav>
 
-    <h1>Projects</h1>
+    <section class="projects">
+        <h1>Projects</h1>
+        <p class="intro">A selection of engineering, electronics and modelling projects I've worked on.</p>
 
-    <p>Shell Internship</p>
-    <p>BESS Development</p>
-    <p>LTSpice Designs</p>
+        <!-- CubeSat EPS Project -->
+        <div class="project-card">
+            <img src="assets/cubesat-eps-pcb.png" alt="CubeSat EPS PCB">
+            <h2>CubeSat Electrical Power System (EPS)</h2>
+            <p>
+                Designed the Electrical Power System for a quantum communications CubeSat, including battery storage,
+                solar generation and regulated power distribution. Developed LTSpice simulations, PCB hardware and
+                energy modelling to validate system performance.
+            </p>
+            <a href="eps.html" class="btn">Learn More</a>
+        </div>
+
+        <!-- Phonograph Preamplifier Project -->
+        <div class="project-card">
+            <img src="assets/preamplifier-pcb.png" alt="Phonograph preamp PCB">
+            <h2>Monophonic Phonograph Preamplifier</h2>
+            <p>
+                Designed and simulated an analogue preamplifier using LTSpice, KiCad and PCB layout tools. Includes
+                circuit schematics, frequency response analysis and final PCB renders.
+            </p>
+            <a href="preamp.html" class="btn">Learn More</a>
+        </div>
+
+        <!-- Python Coding Project -->
+        <div class="project-card">
+            <img src="assets/python-plot.png" alt="Python modelling plot">
+            <h2>Python Modelling & Analysis</h2>
+            <p>
+                A collection of Python-based modelling and analysis scripts, including data processing, numerical
+                simulation and visualisation. Demonstrates proficiency in NumPy, Pandas, Matplotlib and SciPy.
+            </p>
+            <a href="python.html" class="btn">Learn More</a>
+        </div>
+
+    </section>
+
+    <footer class="footer">
+        © Chloe Graham-Major 2026
+    </footer>
+
 </body>
 </html>
