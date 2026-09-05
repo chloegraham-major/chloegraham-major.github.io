@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CubeSat Electrical Power System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <div class="nav-left">
+        <a href="index.html">About Me</a>
+        <a href="index.html#projects">Projects</a>
+        <a href="references.html">References</a>
+    </div>
+    <div class="nav-right">
+        <a class="btn" href="CV.pdf">Download CV</a>
+    </div>
+</nav>
+
+<!-- HERO -->
+<section class="section cubesat-section" style="padding-top:8rem;">
+  <div class="section-content">
+    <div class="text-block">
+      <h1>CubeSat Electrical Power System</h1>
+      <p>
+        A complete EPS architecture designed for a quantum‑communications CubeSat.  
+        This system integrates battery management, regulated power rails, MPPT control,
+        and high‑efficiency DC‑DC conversion using space‑grade components.
+      </p>
+    </div>
+
+    <div class="image-block">
+      <img src="assets/cubesat.png" alt="CubeSat EPS">
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 1 -->
+<section class="section cubesat-section">
+  <div class="section-content">
+    <div class="text-block">
+      <h2>System Overview</h2>
+      <p>
+        The EPS provides stable, efficient power for all CubeSat subsystems.  
+        It manages solar input, battery charging, regulated distribution, and
+        fault‑tolerant switching between power sources.
+      </p>
+
+      <p>
+        Key features include:
+      </p>
+
+      <ul>
+        <li>Maximum Power Point Control (MPPC)</li>
+        <li>High‑efficiency synchronous buck conversion</li>
+        <li>Wide‑range DC‑DC regulation (LTC3119)</li>
+        <li>Battery protection and monitoring</li>
+        <li>3.3V and 12.6V regulated rails</li>
+      </ul>
+    </div>
+
+    <div class="image-block">
+      <img src="assets/cubesat_schematic.png" alt="EPS Schematic">
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 2 -->
+<section class="section cubesat-section">
+  <div class="section-content reverse">
+    <div class="text-block">
+      <h2>DC‑DC Conversion</h2>
+      <p>
+        The EPS uses two main converters:
+      </p>
+
+      <p><strong>LTC3119</strong> — A wide‑range buck‑boost converter providing regulated 12.6V bus power.  
+      It supports MPPC, PGOOD signalling, and seamless transitions between solar and battery input.</p>
+
+      <p><strong>LT8609A</strong> — A synchronous buck converter generating the 3.3V logic rail.  
+      It offers low‑noise switching, fast transient response, and high efficiency.</p>
+
+      <p>
+        These converters ensure stable operation across varying solar input conditions and battery states.
+      </p>
+    </div>
+
+    <div class="image-block">
+      <img src="assets/cubesat_converter.png" alt="DC-DC Converter">
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 3 -->
+<section class="section cubesat-section">
+  <div class="section-content">
+    <div class="text-block">
+      <h2>Battery Architecture</h2>
+      <p>
+        The CubeSat uses a multi‑cell Li‑ion battery pack with protection circuitry,
+        current sensing, and voltage monitoring.  
+      </p>
+
+      <p>
+        The schematic includes:
+      </p>
+
+      <ul>
+        <li>Battery_Cell modules</li>
+        <li>PMOS switching for protection</li>
+        <li>BAT54WS diodes for reverse‑current protection</li>
+        <li>MCP6004 op‑amp for sensing and conditioning</li>
+      </ul>
+
+      <p>
+        These components ensure safe charging, discharging, and accurate telemetry.
+      </p>
+    </div>
+
+    <div class="image-block">
+      <img src="assets/cubesat_battery.png" alt="Battery System">
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 4 -->
+<section class="section cubesat-section">
+  <div class="section-content reverse">
+    <div class="text-block">
+      <h2>Connectors & Interfaces</h2>
+      <p>
+        The EPS provides regulated outputs and telemetry signals to the OBC and payload.
+      </p>
+
+      <ul>
+        <li>SLW‑116‑01‑T‑D main power connector</li>
+        <li>3.3V logic rail</li>
+        <li>12.6V bus rail</li>
+        <li>PGOOD status</li>
+        <li>MPPC control</li>
+      </ul>
+
+      <p>
+        These interfaces ensure reliable integration with the CubeSat’s avionics.
+      </p>
+    </div>
+
+    <div class="image-block">
+      <img src="assets/cubesat_connector.png" alt="Connectors">
+    </div>
+  </div>
+</section>
+
+<!-- BACK BUTTON -->
+<section class="section cubesat-section">
+  <div class="section-content">
+    <div class="text-block">
+      <a class="project-link" href="index.html#projects">← Back to Projects</a>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
