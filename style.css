@@ -173,42 +173,21 @@ img {
    SECTION COLORS
 ---------------------------------------------------------- */
 
-/* Section backgrounds */
-.about-section {
-  background: #ADD1E1;
-  color: #0f1624;
-}
-
 .capstone-section {
-  background: #3E5EA6;
+  background: #2e5c7c;
 }
 
 .cubesat-section {
-  background: #183E9F;
+  background: #243447;
 }
 
 .preamp-section {
-  background: #8E5CA0;
+  background: #2d3a4b;
 }
 
 .python-section {
-  background: #538DC6;
+  background: #1f2a38;
 }
-
-/* Buttons and accents */
-.btn {
-  background: #FFA741;
-}
-
-.btn:hover {
-  background: #FDD77F;
-}
-
-/* Hero gradient */
-.hero {
-  background: linear-gradient(180deg, #1A0081, #183E9F);
-}
-
 
 /* ----------------------------------------------------------
    FOOTER
