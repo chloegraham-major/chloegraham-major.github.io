@@ -2,7 +2,7 @@
 body {
   margin: 0;
   font-family: system-ui, sans-serif;
-  background: #ffffff;
+  background: #190082;
   color: #111;
 }
 
@@ -108,12 +108,12 @@ body {
 }
 .section {
     padding: 4rem 2rem;
-    color: #fff; /* white text */
+    background: #5EA4C4;
 }
 
 /* Choose your colours */
 .about-section {
-    background: #1a1f36;   /* dark navy */
+    background: ;   /* dark navy */
 }
 
 .cubesat-section {
