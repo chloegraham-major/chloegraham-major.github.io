@@ -56,11 +56,11 @@ body {
 .hero-content {
   position: relative;
   text-align: center;
-  top: 50%;
-  transform: translateY(-30%);
+  top: 55%;        /* adjust this number to place text EXACTLY where you want */
   color: #fff;
-  padding: 0 2rem; /* side padding */
+  padding: 0 2rem;
 }
+
 
 .hero-content h1 {
   font-size: 4rem;
