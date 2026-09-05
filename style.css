@@ -106,3 +106,24 @@ body {
   padding: 2rem 0;
   color: #777;
 }
+.section {
+    padding: 4rem 2rem;
+    color: #fff; /* white text */
+}
+
+/* Choose your colours */
+.about-section {
+    background: #1a1f36;   /* dark navy */
+}
+
+.cubesat-section {
+    background: #2b3a67;   /* steel blue */
+}
+
+.preamp-section {
+    background: #3c4f82;   /* lighter blue */
+}
+
+.python-section {
+    background: #4e6bb3;   /* bright blue */
+}
