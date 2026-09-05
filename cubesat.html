@@ -26,9 +26,12 @@
     <div class="text-block">
       <h1>CubeSat Electrical Power System</h1>
       <p>
-        A complete EPS architecture designed for a quantum‑communications CubeSat.  
-        This system integrates battery management, regulated power rails, MPPT control,
-        and high‑efficiency DC‑DC conversion using space‑grade components.
+        As Electrical Power Systems Lead, I designed the full power architecture for a
+        quantum‑communications CubeSat — combining analytical modelling, circuit design,
+        PCB development and hardware validation.  
+        The EPS ensures reliable power generation, storage and distribution in a constrained,
+        mission‑critical environment, integrating solar input, battery management and
+        regulated power delivery.
       </p>
     </div>
 
@@ -44,22 +47,27 @@
     <div class="text-block">
       <h2>System Overview</h2>
       <p>
-        The EPS provides stable, efficient power for all CubeSat subsystems.  
-        It manages solar input, battery charging, regulated distribution, and
-        fault‑tolerant switching between power sources.
+        The EPS was designed to deliver stable, efficient power to all CubeSat subsystems
+        under varying orbital conditions.  
+        I developed analytical tools to model energy generation, battery behaviour and
+        subsystem loads, ensuring the design met mission requirements and operated safely
+        across all expected scenarios.
       </p>
 
-      <p>
-        Key features include:
-      </p>
+      <p>Key system capabilities:</p>
 
       <ul>
-        <li>Maximum Power Point Control (MPPC)</li>
+        <li>Maximum Power Point Control (MPPC) for solar optimisation</li>
         <li>High‑efficiency synchronous buck conversion</li>
-        <li>Wide‑range DC‑DC regulation (LTC3119)</li>
-        <li>Battery protection and monitoring</li>
-        <li>3.3V and 12.6V regulated rails</li>
+        <li>Wide‑range buck‑boost regulation (LTC3119)</li>
+        <li>Battery protection, sensing and telemetry</li>
+        <li>Regulated 3.3V logic rail and 12.6V bus rail</li>
       </ul>
+
+      <p>
+        This work reflects my broader engineering approach: combining modelling,
+        simulation and hardware design to build systems that work reliably in the real world.
+      </p>
     </div>
 
     <div class="image-block">
@@ -74,17 +82,19 @@
     <div class="text-block">
       <h2>DC‑DC Conversion</h2>
       <p>
-        The EPS uses two main converters:
+        The EPS uses two main converters, selected and modelled to ensure efficiency,
+        stability and resilience across orbital operating conditions:
       </p>
 
       <p><strong>LTC3119</strong> — A wide‑range buck‑boost converter providing regulated 12.6V bus power.  
-      It supports MPPC, PGOOD signalling, and seamless transitions between solar and battery input.</p>
+      It supports MPPC, PGOOD signalling and seamless transitions between solar and battery input.</p>
 
       <p><strong>LT8609A</strong> — A synchronous buck converter generating the 3.3V logic rail.  
-      It offers low‑noise switching, fast transient response, and high efficiency.</p>
+      It offers low‑noise switching, fast transient response and high efficiency.</p>
 
       <p>
-        These converters ensure stable operation across varying solar input conditions and battery states.
+        I validated converter behaviour using LTSpice simulations, analysing transient
+        response, switching performance and load regulation to ensure mission‑ready operation.
       </p>
     </div>
 
@@ -100,23 +110,24 @@
     <div class="text-block">
       <h2>Battery Architecture</h2>
       <p>
-        The CubeSat uses a multi‑cell Li‑ion battery pack with protection circuitry,
-        current sensing, and voltage monitoring.  
+        The CubeSat uses a multi‑cell Li‑ion battery pack with integrated protection,
+        sensing and conditioning circuitry.  
+        I modelled battery behaviour under charge/discharge cycles, orbital lighting
+        conditions and subsystem loads to ensure safe and reliable operation.
       </p>
 
-      <p>
-        The schematic includes:
-      </p>
+      <p>The architecture includes:</p>
 
       <ul>
-        <li>Battery_Cell modules</li>
-        <li>PMOS switching for protection</li>
+        <li>Li‑ion Battery_Cell modules</li>
+        <li>PMOS switching for protection and isolation</li>
         <li>BAT54WS diodes for reverse‑current protection</li>
-        <li>MCP6004 op‑amp for sensing and conditioning</li>
+        <li>MCP6004 op‑amp for sensing and signal conditioning</li>
       </ul>
 
       <p>
-        These components ensure safe charging, discharging, and accurate telemetry.
+        These components ensure accurate telemetry, safe operation and robust protection
+        against electrical faults.
       </p>
     </div>
 
@@ -132,19 +143,23 @@
     <div class="text-block">
       <h2>Connectors & Interfaces</h2>
       <p>
-        The EPS provides regulated outputs and telemetry signals to the OBC and payload.
+        The EPS provides regulated outputs and telemetry signals to the onboard computer
+        and payload.  
+        I designed connector interfaces to ensure reliable integration with CubeSat avionics
+        and to support modular testing during development.
       </p>
 
       <ul>
         <li>SLW‑116‑01‑T‑D main power connector</li>
         <li>3.3V logic rail</li>
         <li>12.6V bus rail</li>
-        <li>PGOOD status</li>
-        <li>MPPC control</li>
+        <li>PGOOD status signalling</li>
+        <li>MPPC control interface</li>
       </ul>
 
       <p>
-        These interfaces ensure reliable integration with the CubeSat’s avionics.
+        These interfaces support safe operation, clear telemetry and robust subsystem
+        integration.
       </p>
     </div>
 
