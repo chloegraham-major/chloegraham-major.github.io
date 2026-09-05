@@ -36,7 +36,7 @@ body {
 .hero {
   position: relative;
   height: 65vh;
-  background-image: url('assets/power-market-background.jpg');
+  background-image: url('assets/portfolio-bg.png');
   background-size: cover;
   background-position: center;
 }
