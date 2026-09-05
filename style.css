@@ -3,7 +3,7 @@ body {
   margin: 0;
   font-family: system-ui, sans-serif;
   background: #190082;
-  color: #111;
+  color: #fff;
 }
 
 /* Navigation */
@@ -39,12 +39,6 @@ body {
   background-image: url('assets/portfolio-bg.png');
   background-size: cover;
   background-position: center;
-}
-
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.45);
 }
 
 .hero-content {
