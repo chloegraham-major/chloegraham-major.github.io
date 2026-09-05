@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Monophonic Phonograph Preamplifier</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <div class="nav-left">
+        <a href="index.html">About Me</a>
+        <a href="index.html#projects">Projects</a>
+        <a href="references.html">References</a>
+    </div>
+    <div class="nav-right">
+        <a class="btn" href="CV.pdf">Download CV</a>
+    </div>
+</nav>
+
+<!-- HERO -->
+<section class="section preamp-section" style="padding-top:8rem;">
+  <div class="section-content">
+    <div class="text-block">
+      <h1>Monophonic Phonograph Preamplifier</h1>
+      <p>
+        A high‑fidelity phonograph preamplifier designed for both Moving Magnet (MM) and 
+        Moving Coil (MC) cartridges. This project integrates RIAA equalisation, low‑noise 
+        op‑amp stages, relay‑based mode switching, and a compact, manufacturable PCB layout.
+      </p>
+    </div>
+
+    <div class="image-block">
+      <img src="assets/preamp.png" alt="Preamplifier PCB">
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 1 -->
+<section class="section preamp-section">
+  <div class="section-content">
+    <div class="text-block">
+      <h2>Design Overview</h2>
+      <p>
+        The preamplifier was designed to meet the RIAA equalisation standard using an 
+        inverting amplifier topology. This allows the RC networks to sit directly in the 
+        feedback loop, enabling precise control of the required time constants:
+      </p>
+
+      <p>
+        <strong>τ<sub>Z</sub> = 318 μs, τ<sub>P1</sub> = 75 μs, τ<sub>P2</sub> = 3180 μs</strong>
+      </p>
+
+      <p>
+        Using LTSpice, resistor and capacitor values were tuned to achieve <strong>&lt;1% deviation</strong> 
+        from the ideal RIAA curve. The MM stage provides 36 dB gain, while the MC stage 
+        adds an additional 20 dB using a non‑inverting op‑amp configuration.
+      </p>
+    </div>
+
+    <div class="image-block">
+      <img src="assets/preamp_schematic.png" alt="Preamplifier Schematic">
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 2 -->
+<section class="section preamp-section">
+  <div class="section-content reverse">
+    <div class="text-block">
+      <h2>RIAA Equalisation</h2>
+      <p>
+        The RIAA network was implemented using two RC pairs in the feedback loop of an 
+        OPA1641 op‑amp. This JFET‑input amplifier was selected for its low noise, high 
+        slew rate, and excellent linearity.
+      </p>
+
+      <p>
+        Component values:
+      </p>
+
+      <ul>
+        <li>R1 = 73.2 kΩ</li>
+        <li>C1 = 43 nF</li>
+        <li>R2 = 6.19 kΩ</li>
+        <li>C2 = 12 nF</li>
+        <li>R<sub>in</sub> = 1.27 kΩ</li>
+      </ul>
+
+      <p>
+        These values produce a closed‑loop gain of 35.9 dB, matching the MM requirement.
+      </p>
+    </div>
+
+    <div class="image-block">
+      <img src="assets/preamp_bode.png" alt="RIAA Bode Plot">
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 3 -->
+<section class="section preamp-section">
+  <div class="section-content">
+    <div class="text-block">
+      <h2>MM / MC Mode Switching</h2>
+      <p>
+        A DPDT relay enables switching between MM and MC modes:
+      </p>
+
+      <ul>
+        <li>One pole switches the gain stage between unity (MM) and gain of 10 (MC)</li>
+        <li>The other pole switches input loading between MM (47.5 kΩ, 100 pF) and MC (100 Ω, 3000 pF)</li>
+      </ul>
+
+      <p>
+        This ensures correct cartridge loading and accurate reproduction of the RIAA curve 
+        for both cartridge types.
+      </p>
+    </div>
+
+    <div class="image-block">
+      <img src="assets/preamp_relay.png" alt="Relay Switching">
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 4 -->
+<section class="section preamp-section">
+  <div class="section-content reverse">
+    <div class="text-block">
+      <h2>PCB Layout</h2>
+      <p>
+        A compact two‑layer PCB (55.9 mm × 33.6 mm) was designed with:
+      </p>
+
+      <ul>
+        <li>10 mil minimum track width and spacing</li>
+        <li>39 mil power tracks for reduced resistance and noise</li>
+        <li>SMD components for density and low parasitics</li>
+        <li>Through‑hole connectors for durability</li>
+        <li>Careful placement to minimise noise coupling from the relay coil</li>
+      </ul>
+
+      <p>
+        Mounting holes (2.2 mm) were added for secure enclosure integration.
+      </p>
+    </div>
+
+    <div class="image-block">
+      <img src="assets/preamp_layout.png" alt="PCB Layout">
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 5 -->
+<section class="section preamp-section">
+  <div class="section-content">
+    <div class="text-block">
+      <h2>Performance</h2>
+      <p>
+        LTSpice simulations were used to evaluate distortion, noise, and power consumption.
+      </p>
+
+      <h3>Total Harmonic Distortion</h3>
+      <p>
+        THD was measured at <strong>1.157%</strong> for both MM and MC modes.  
+        Reducing resistor values (e.g., R5) may further improve linearity.
+      </p>
+
+      <h3>Noise</h3>
+      <p>
+        Noise spectral density:
+      </p>
+
+      <ul>
+        <li>MM: 1.4 μV/√Hz</li>
+        <li>MC: 9.6 μV/√Hz</li>
+      </ul>
+
+      <p>
+        R5 dominates noise due to its position at the inverting input.
+      </p>
+
+      <h3>Power Consumption</h3>
+      <p>
+        MM mode: 86.4 mW total  
+        MC mode: 98 mW total  
+      </p>
+
+      <p>
+        The push‑pull output stage explains the slight rail asymmetry at higher gain.
+      </p>
+    </div>
+
+    <div class="image-block">
+      <img src="assets/preamp_fft.png" alt="FFT Analysis">
+    </div>
+  </div>
+</section>
+
+<!-- BACK BUTTON -->
+<section class="section preamp-section">
+  <div class="section-content">
+    <div class="text-block">
+      <a class="project-link" href="index.html#projects">← Back to Projects</a>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
