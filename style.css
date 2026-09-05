@@ -93,6 +93,43 @@ body {
   padding: 4rem 2rem;
   color: #fff;
 }
+/* Capstone Section */
+.capstone-section {
+    background: #2e5c7c;        /* deep blue-grey, matches your palette */
+    padding: 4rem 2rem;         /* consistent with other sections */
+    color: #fff;                /* white text for readability */
+}
+
+.capstone-section .section-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.capstone-section .section-content.reverse {
+    flex-direction: row-reverse;
+}
+
+.capstone-section .text-block {
+    flex: 1;
+    font-size: 1.4rem;
+    line-height: 1.7;
+}
+
+.capstone-section .image-block {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.capstone-section .image-block img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
 
 .cubesat-section {
   background: #ADD1E1;
