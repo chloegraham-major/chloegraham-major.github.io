@@ -1,4 +1,6 @@
-/* Global */
+/* -----------------------------------------------------------
+   GLOBAL
+----------------------------------------------------------- */
 body {
   margin: 0;
   font-family: system-ui, sans-serif;
@@ -6,7 +8,9 @@ body {
   color: #111;
 }
 
-/* Navigation */
+/* -----------------------------------------------------------
+   NAVIGATION
+----------------------------------------------------------- */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -32,7 +36,9 @@ body {
   border-radius: 6px;
 }
 
-/* Hero Section */
+/* -----------------------------------------------------------
+   HERO SECTION
+----------------------------------------------------------- */
 .hero {
   position: relative;
   height: 65vh;
@@ -65,14 +71,9 @@ body {
   margin-top: 0.75rem;
 }
 
-/* About Section */
-.about {
-  max-width: 900px;
-  margin: 3rem auto;
-  padding: 0 1rem;
-  text-align: center;
-}
-
+/* -----------------------------------------------------------
+   SCROLL PROMPT
+----------------------------------------------------------- */
 .scroll-prompt {
   margin-top: 2rem;
   font-size: 1rem;
@@ -85,7 +86,9 @@ body {
   margin-top: 0.5rem;
 }
 
-/* Featured Project */
+/* -----------------------------------------------------------
+   FEATURED PROJECT (OLD SECTION)
+----------------------------------------------------------- */
 .featured-project {
   max-width: 900px;
   margin: 3rem auto;
@@ -100,30 +103,84 @@ body {
   box-shadow: 0 2px 8px rgba(0,0,0,0.15);
 }
 
-/* Footer */
-.footer {
-  text-align: center;
-  padding: 2rem 0;
-  color: #777;
-}
+/* -----------------------------------------------------------
+   COLOURED SECTIONS (NEW)
+----------------------------------------------------------- */
 .section {
-    padding: 4rem 2rem;
-    background: #5EA4C4;
+  padding: 4rem 2rem;
+  color: #fff;
 }
 
 /* Choose your colours */
 .about-section {
-    background: ;   /* dark navy */
+  background: #1a1f36;   /* dark navy */
 }
 
 .cubesat-section {
-    background: #2b3a67;   /* steel blue */
+  background: #2b3a67;   /* steel blue */
 }
 
 .preamp-section {
-    background: #3c4f82;   /* lighter blue */
+  background: #3c4f82;   /* lighter blue */
 }
 
 .python-section {
-    background: #4e6bb3;   /* bright blue */
+  background: #4e6bb3;   /* bright blue */
+}
+
+/* -----------------------------------------------------------
+   ALTERNATING LAYOUT (NEW)
+----------------------------------------------------------- */
+.section-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.section-content.reverse {
+  flex-direction: row-reverse;
+}
+
+.text-block {
+  flex: 1;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.image-block {
+  flex: 1;
+}
+
+.image-block img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+/* -----------------------------------------------------------
+   MOBILE RESPONSIVE
+----------------------------------------------------------- */
+@media (max-width: 800px) {
+  .section-content,
+  .section-content.reverse {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .image-block img {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+}
+
+/* -----------------------------------------------------------
+   FOOTER
+----------------------------------------------------------- */
+.footer {
+  text-align: center;
+  padding: 2rem 0;
+  color: #777;
 }
