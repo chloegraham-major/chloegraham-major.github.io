@@ -1,155 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Chloe Graham‑Major | Electrical Engineering Portfolio</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Chloe Graham‑Major | Engineering Portfolio</title>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-left">
+      <a href="about.html">About Me</a>
+      <a href="projects.html">Projects</a>
+      <a href="references.html">References</a>
+    </div>
+    <div class="nav-right">
+      <a href="assets/Chloe_Graham-Major_CV.pdf" class="btn" download>Download CV</a>
+    </div>
+  </nav>
 
-<!-- Navigation -->
-<nav class="navbar">
-  <a href="index.html" class="logo">CGM</a>
-  <div class="nav-left">
-    <a href="about.html">About Me</a>
-    <a href="projects.html">Projects</a>
-    <a href="references.html">References</a>
-  </div>
-  <div class="nav-right">
-    <a href="assets/Chloe_Graham-Major_CV.pdf" class="btn" download>Download CV</a>
-  </div>
-</nav>
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>CHLOE GRAHAM‑MAJOR</h1>
+      <p class="subtitle">
+        Final‑year MEng Electrical Engineer at Durham University | Power Markets | Energy Systems | Quantitative Modelling
+      </p>
+    </div>
+  </header>
 
-<!-- Hero Section -->
-<header class="hero">
-  <svg class="hero-art" viewBox="0 0 1400 700" preserveAspectRatio="xMidYMax slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <defs>
-      <linearGradient id="lineGlow" x1="0" y1="0" x2="1" y2="0">
-        <stop offset="0%" stop-color="#f2a444" stop-opacity="0.9"/>
-        <stop offset="100%" stop-color="#ffd08a" stop-opacity="1"/>
-      </linearGradient>
-    </defs>
+  <!-- About Section -->
+  <section class="about">
+    <h2>About Me</h2>
+    <p>
+      I’m a final‑year MEng Electrical Engineering student specialising in power markets, renewable energy,
+      battery storage systems and quantitative modelling. My work spans CubeSat power systems, electronics design,
+      LTSpice simulation, Python modelling and energy systems analysis.
+    </p>
 
-    <!-- faint grid ticker backdrop -->
-    <g stroke="#3a2f8f" stroke-width="1" opacity="0.35">
-      <line x1="0" y1="90" x2="1400" y2="90"/>
-      <line x1="0" y1="180" x2="1400" y2="180"/>
-      <line x1="0" y1="270" x2="1400" y2="270"/>
-      <line x1="140" y1="0" x2="140" y2="700"/>
-      <line x1="420" y1="0" x2="420" y2="700"/>
-      <line x1="700" y1="0" x2="700" y2="700"/>
-      <line x1="980" y1="0" x2="980" y2="700"/>
-      <line x1="1260" y1="0" x2="1260" y2="700"/>
-    </g>
+    <div class="scroll-prompt">
+      <p>SCROLL TO FIND OUT MORE!</p>
+      <span class="arrow">▼</span>
+    </div>
+  </section>
 
-    <!-- pylons -->
-    <g fill="none" stroke="#6fd8ff" stroke-width="2.5" opacity="0.55">
-      <path d="M120 480 L170 180 L220 480 M140 260 L200 260 M150 320 L190 320 M160 380 L180 380 M100 480 L240 480"/>
-      <path d="M300 500 L340 260 L380 500 M315 300 L365 300 M320 350 L360 350 M290 500 L390 500"/>
-      <path d="M60 500 L95 300 L130 500 M70 340 L120 340 M290 500 L60 500" opacity="0.3"/>
-    </g>
-
-    <!-- market line, static -->
-    <polyline points="80,430 260,300 440,410 620,260 800,150 980,340 1160,240 1340,110"
-      fill="none" stroke="url(#lineGlow)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M1300 130 L1340 110 L1330 152" fill="none" stroke="#ffd08a" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-  </svg>
-
-  <div class="hero-content">
-    <h1>Chloe Graham&#8209;Major</h1>
-    <p class="subtitle">Final&#8209;year MEng Electrical Engineer, Durham University &nbsp;|&nbsp; Power Markets &nbsp;|&nbsp; Energy Systems</p>
-  </div>
-</header>
-
-<!-- About Section -->
-<section class="about">
-  <h2>About Me</h2>
-  <p>
-    I'm a final‑year MEng Electrical Engineering student specialising in power markets, renewable
-    energy, battery storage systems and quantitative modelling. My work spans CubeSat power systems,
-    analogue electronics design, LTSpice simulation and Python‑based energy systems analysis.
-  </p>
-  <a class="scroll-prompt" href="#projects">
-    <span>Scroll to find out more</span>
-    <svg width="22" height="14" viewBox="0 0 22 14" fill="none"><path d="M2 2L11 11L20 2" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
-  </a>
+  <!-- Featured Project -->
+  <section class="featured-project">
+    <h2>Electrical Power System for CubeSat</h2>
+    <p>
+      A multi‑layer EPS architecture including PCB hardware, LTSpice simulations, battery storage modelling
+      and regulated power distribution for a quantum communications CubeSat.
+    </p>
+    <img src="assets/pcb-stack.jpg" alt="CubeSat EPS exploded view" class="project-image">
+  </section>
+<section class="section about-section">
+    <h2>About Me</h2>
+    <p>Insert information here...</p>
 </section>
 
-<!-- Projects Section -->
-<section class="projects" id="projects">
-  <h2>Projects</h2>
-
-  <article class="project">
-    <div class="project-media">
-      <img src="assets/pcb-stack.jpg" alt="Exploded view of the CubeSat electrical power system PCB stack">
-    </div>
-    <div class="project-copy">
-      <div class="tags"><span>PCB DESIGN</span><span>LTSPICE</span><span>BATTERY MGMT</span></div>
-      <h3>Electrical Power System for CubeSat</h3>
-      <p>
-        A multi‑layer EPS architecture for a quantum‑communications CubeSat, covering PCB hardware,
-        LTSpice simulation of the regulation stages, battery storage modelling and fault‑tolerant
-        power distribution to payload subsystems.
-      </p>
-      <a class="project-link" href="projects.html#cubesat">View project details</a>
-    </div>
-  </article>
-
-  <article class="project reverse">
-    <div class="project-media placeholder">
-      <svg viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <circle cx="120" cy="120" r="90" fill="none" stroke="#0b1220" stroke-width="2" opacity="0.15"/>
-        <path d="M40 150 L80 150 L95 90 L115 190 L135 60 L150 150 L200 150" fill="none" stroke="#0b1220" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" opacity="0.55"/>
-      </svg>
-    </div>
-    <div class="project-copy">
-      <div class="tags"><span>ANALOGUE DESIGN</span><span>RIAA EQ</span><span>PCB LAYOUT</span></div>
-      <h3>Phonograph Preamplifier</h3>
-      <p>
-        A discrete RIAA‑equalised phono preamplifier built to bring vinyl‑level signals up to line
-        level, with the equalisation curve verified against the RIAA standard in LTSpice before
-        hardware bring‑up.
-      </p>
-      <a class="project-link" href="projects.html#preamp">View project details</a>
-    </div>
-  </article>
-
-  <article class="project">
-    <div class="project-media placeholder">
-      <svg viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <g fill="none" stroke="#0b1220" stroke-width="4" stroke-linecap="round" opacity="0.55">
-          <rect x="45" y="130" width="24" height="70"/>
-          <rect x="90" y="90" width="24" height="110"/>
-          <rect x="135" y="150" width="24" height="50"/>
-          <rect x="180" y="60" width="24" height="140"/>
-        </g>
-      </svg>
-    </div>
-    <div class="project-copy">
-      <div class="tags"><span>PYTHON</span><span>PANDAS</span><span>MARKET MODELLING</span></div>
-      <h3>Python Modelling &amp; Analysis</h3>
-      <p>
-        A collection of Python tools for analysing GB power market data: day‑ahead price forecasting,
-        battery arbitrage backtesting, and visualisation of imbalance and system‑price trends.
-      </p>
-      <a class="project-link" href="projects.html#python">View project details</a>
-    </div>
-  </article>
+<section class="section cubesat-section">
+    <h2>Electrical Power System for CubeSat</h2>
+    <p>Insert information here...</p>
 </section>
 
-<!-- Footer -->
-<footer class="footer">
-  <p class="connect-title">Let's connect</p>
-  <div class="connect-links">
-    <a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
-    <a href="mailto:chloe.graham-major@durham.ac.uk">Email</a>
-  </div>
-  <p class="copyright">&copy; Chloe Graham‑Major 2026</p>
-</footer>
+<section class="section preamp-section">
+    <h2>Phonograph Preamplifier</h2>
+    <p>Insert information here...</p>
+</section>
 
+<section class="section python-section">
+    <h2>Python Modelling & Analysis</h2>
+    <p>Insert information here...</p>
+</section>
+
+  <footer class="footer">
+    © Chloe Graham‑Major 2026
+  </footer>
 </body>
 </html>
