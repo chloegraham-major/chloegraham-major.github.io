@@ -12,14 +12,18 @@ body {
    NAVIGATION
 ----------------------------------------------------------- */
 .navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
   display: flex;
   justify-content: space-between;
-  padding: 0rem 2rem;
-  background: #fff;
-  border-bottom: 1px solid #eee;
-  position: sticky;
-  top: 0;
-  z-index: 10;
+  align-items: center;      /* vertically centers EVERYTHING */
+  padding: 1.2rem 2rem;     /* slightly taller navbar */
+  background: rgba(255,255,255,0.9);
+  backdrop-filter: blur(6px);
+  border-bottom: none;
+  z-index: 20;
 }
 
 /* FIX: align nav items vertically */
