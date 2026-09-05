@@ -51,7 +51,7 @@ body {
   position: relative;
   text-align: center;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translateY(-80%);
   color: #fff;
 }
 
