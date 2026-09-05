@@ -14,7 +14,7 @@ body {
 .navbar {
   display: flex;
   justify-content: space-between;
-  padding: 1rem 2rem;
+  padding: 0rem 2rem;
   background: #fff;
   border-bottom: 1px solid #eee;
   position: sticky;
@@ -48,12 +48,6 @@ body {
   margin-top: 0; /* remove gap under navbar */
 }
 
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.45);
-}
-
 .hero-content {
   position: relative;
   text-align: center;
@@ -74,7 +68,7 @@ body {
   max-width: 800px;
   margin: 0 auto;
   line-height: 1.6;
-  padding: 0 2rem;
+  padding: 0 1.4rem;
 }
 
 /* -----------------------------------------------------------
